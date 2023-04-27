@@ -70,11 +70,11 @@ class _HisDetailsState extends State<HisDetails> {
                       title:
                           'ชืื่อร้าน ${appController.resModelForListOrders.first.res_name}',
                       textStyle: MyCostant().h2Style()),
-                  CircleAvatar(
-                    radius: 20,
-                    backgroundImage: NetworkImage(
-                        '${MyCostant.domain}${appController.resModelForListOrders.first.company_logo}'),
-                  ),
+                  // CircleAvatar(
+                  //   radius: 20,
+                  //   backgroundImage: NetworkImage(
+                  //       '${MyCostant.domain}${appController.resModelForListOrders.first.company_logo}'),
+                  // ),
                   Text(
                     'ชื่อผู้ส่ง ${widget.orderModel.idRidder}',
                     style: MyCostant().h2Style(),

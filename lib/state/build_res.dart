@@ -60,7 +60,7 @@ class BuildRes extends StatelessWidget {
                                 ),
                                 const SizedBox(width: 4),
                                 Text(
-                                  '฿${AppService().calculatePriceDistance(distance: appController.distanceKm.value)} | ${appController.distanceKm.toStringAsFixed(1)} km',
+                                  ' ${appController.distanceKms[index].toStringAsFixed(1)} km',
                                   style: MyCostant().h4Style(),
                                 ),
                               ],

@@ -94,10 +94,10 @@ class _IndexState extends State<Index> {
                       actions: [
                         IconButton(
                           onPressed: () {
-                            Navigator.push(context,
-                                MaterialPageRoute(builder: (context) {
-                              return const Favorite();
-                            }));
+                            // Navigator.push(context,
+                            //     MaterialPageRoute(builder: (context) {
+                            //   return const Favorite();
+                            // }));
                           },
                           icon: const Icon(
                             Icons.favorite,
@@ -139,13 +139,13 @@ class _IndexState extends State<Index> {
                                           Expanded(
                                             child: BuildRes(),
                                           ),
-                                          Text(
-                                            'ร้านน่าลอง',
-                                            style: MyCostant().h2Style(),
-                                          ),
-                                          SizedBox(
-                                            height: 500,
-                                          ),
+                                          // Text(
+                                          //   'ร้านน่าลอง',
+                                          //   style: MyCostant().h2Style(),
+                                          // ),
+                                          // SizedBox(
+                                          //   height: 500,
+                                          // ),
                                         ],
                                       ),
                                     ),

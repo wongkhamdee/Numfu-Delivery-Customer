@@ -119,7 +119,7 @@ class _SearchPageState extends State<SearchPage> {
                       width: 100,
                     ),
                     title: Text(product['res_name']),
-                    subtitle: Text(product['res_name']),
+                    subtitle: Text(product['complete_address']),
                     onTap: () {
                       var selectedRestaurant = appController.restaurantModels
                           .firstWhere((res) => res.res_id == product['res_id']);

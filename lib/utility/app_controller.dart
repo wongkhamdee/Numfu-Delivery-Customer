@@ -15,6 +15,7 @@ class AppController extends GetxController {
   RxList<ProductModel> productModels = <ProductModel>[].obs;
   RxInt amount = 1.obs;
   RxDouble distanceKm = 0.0.obs;
+  RxList<double> distanceKms = <double>[].obs;
   RxList<SQLiteModel> sqliteModels = <SQLiteModel>[].obs;
   RxInt total = 0.obs;
   RxList<UserModel> currentUserModels = <UserModel>[].obs;
@@ -32,6 +33,5 @@ class AppController extends GetxController {
   RxList<OrderModel> refereshStateorderModel = <OrderModel>[].obs;
   RxList<RestaurantModel> refereshStateResModel = <RestaurantModel>[].obs;
   RxList<RiderModel> refereshStateRiderModel = <RiderModel>[].obs;
-  //--------------- 
-
+  //---------------
 }

@@ -21,7 +21,8 @@ class WidgetFootercart extends StatelessWidget {
             return const SizedBox(); // ถ้าไม่มีสินค้าในตะกร้า ให้แสดงว่างเปล่า
           } else {
             return badgas.Badge(
-              position: badgas.BadgePosition.bottomEnd(bottom: 2),
+              position: badgas.BadgePosition.custom(
+                  isCenter: false, bottom: 5, start: 25),
               badgeContent: Padding(
                 padding: const EdgeInsets.all(3.0),
                 child: Text(
@@ -43,8 +44,8 @@ class WidgetFootercart extends StatelessWidget {
                   backgroundColor: MyCostant.primary,
                   shape: const RoundedRectangleBorder(
                     borderRadius: BorderRadius.only(
-                      topRight: Radius.circular(30.0),
-                      topLeft: Radius.circular(30.0),
+                      topRight: Radius.circular(10.0),
+                      topLeft: Radius.circular(10.0),
                     ),
                   ),
                   icon: const Icon(

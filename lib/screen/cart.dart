@@ -118,11 +118,11 @@ class _CartState extends State<Cart> {
                                 style: MyCostant().h2Style(),
                               ),
                               GestureDetector(
-                                onTap: () {
-                                  Get.to(Res(
-                                      restaurantModel:
-                                          appController.restaurantModels.last));
-                                },
+                                // onTap: () {
+                                //   Get.to(Res(
+                                //       restaurantModel:
+                                //           appController.restaurantModels.last));
+                                // },
                                 child: Text(
                                   'เพิ่มเมนู ',
                                   style: MyCostant().h44Style(),

@@ -159,6 +159,7 @@ class AppService {
 
             Map<String, dynamic> map = restaurantModel.toMap();
             map['distance'] = distance;
+            appController.distanceKms.add(distance);
 
             // print('## map --> $map');
             rawMap.add(map);

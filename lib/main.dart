@@ -12,6 +12,7 @@ import 'package:numfu/utility/app_controller.dart';
 import 'package:numfu/utility/my_constant.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:intl/date_symbol_data_local.dart';
+
 final Map<String, WidgetBuilder> map = {
   '/login': (BuildContext Context) => Login(),
   '/Launcher': (BuildContext Context) => Launcher(),
@@ -48,7 +49,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return GetMaterialApp(
       //debugShowCheckedModeBanner: false,
-
+      debugShowCheckedModeBanner: false,
       title: MyCostant.appName,
       routes: map,
       initialRoute: initlalRoute,

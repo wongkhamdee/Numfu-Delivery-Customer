@@ -94,15 +94,15 @@ class _MenuState extends State<Menu> {
                       //         textStyle: MyCostant().h3Style())
                       //   ],
                       // ),
-                      // Row(
-                      //   children: [
-                      //     Text('ค่าส่ง : ', style: MyCostant().h3Style()),
-                      //     ShowTitle(
-                      //         title:
-                      //             '฿ ${AppService().calculatePriceDistance(distance: appController.distanceKm.value)}',
-                      //         textStyle: MyCostant().h3Style())
-                      //   ],
-                      // ),
+                      Row(
+                        children: [
+                          Text('ค่าส่ง : ', style: MyCostant().h3Style()),
+                          ShowTitle(
+                              title:
+                                  '฿ ${AppService().calculatePriceDistance(distance: appController.distanceKm.value)}',
+                              textStyle: MyCostant().h3Style())
+                        ],
+                      ),
                       // buildchoice1(),
                       // Text('ซีอิ๊วดำหวาน', style: MyCostant().h3Style()),
                       // buildchoice2(),

@@ -125,17 +125,24 @@ class _LocationMapState extends State<LocationMap> {
 
   Container buildMap() {
     return Container(
-        width: double.infinity,
-        height: double.infinity,
-        child: lat == null
-            ? ShowProgress()
-            : GoogleMap(
-                initialCameraPosition: CameraPosition(
-                  target: LatLng(lat!, lng!),
-                  zoom: 16,
-                ),
-                onMapCreated: (controller) {},
-                markers: setMarker(),
-              ));
+      width: double.infinity,
+      height: double.infinity,
+      child: lat == null
+          ? ShowProgress()
+          : GoogleMap(
+              initialCameraPosition: CameraPosition(
+                target: LatLng(lat!, lng!),
+                zoom: 16,
+              ),
+              onMapCreated: (controller) {},
+              onTap: (LatLng latLng) {
+                setState(() {
+                  lat = latLng.latitude;
+                  lng = latLng.longitude;
+                });
+              },
+              markers: setMarker(),
+            ),
+    );
   }
 }

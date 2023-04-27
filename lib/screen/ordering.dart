@@ -46,9 +46,9 @@ class _OrderingState extends State<Ordering> {
   @override
   void initState() {
     super.initState();
-    readApiAllSale();
+
     AppService().readMapWhereOrderIdResIdUserId(id: widget.orderModel.id);
-    AppService().refreshapprove();
+
     // sourceLocation = LatLng(
     //   double.parse(appController.resMapModelForListOrders.last.latitude),
     //   double.parse(appController.resMapModelForListOrders.last.longitude),
@@ -84,27 +84,11 @@ class _OrderingState extends State<Ordering> {
     super.dispose();
   }
 
-  Future<Null> readApiAllSale() async {
-    String url =
-        '${MyCostant.domain}/customer_getRestaurnatWhereResid.php?isAdd=true';
-    await Dio().get(url).then((value) {
-      var result = json.decode(value.data);
-      setState(() {
-        load = false;
-      });
-      for (var item in result) {
-        RestaurantModel model = RestaurantModel.fromMap(item);
-        setState(() {
-          resmodel.add(model);
-        });
-      }
-    });
-  }
-
-  late LatLng destination;
-  late LatLng sourceLocation;
-  //  static const LatLng sourceLocation = LatLng(38.33500926, -122.03272188);
-  // static const LatLng destination = LatLng(37.33429383, -122.06600055);
+  // late LatLng destination;
+  // late LatLng sourceLocation;
+  static const LatLng sourceLocation =
+      LatLng(13.756202272750544, 100.71449536500519);
+  static const LatLng destination = LatLng(13.7290683, 100.7753376);
   List<LatLng> polylineCoordinates = [];
   void getPolyPoints() async {
     PolylinePoints polylinePoints = PolylinePoints();
@@ -133,14 +117,15 @@ class _OrderingState extends State<Ordering> {
       body: GetX(
           init: AppController(),
           builder: (AppController appController) {
-            return appController.orderModel.isEmpty
+            return appController.resMapModelForListOrders.isEmpty &&
+                    appController.currentUserModels.isEmpty
                 ? const Text('data')
                 : Column(
                     children: [
                       Column(
                         children: [
                           SizedBox(
-                            height: 460,
+                            height: 480,
                             child: GoogleMap(
                               onMapCreated: (controller) {},
                               initialCameraPosition: CameraPosition(
