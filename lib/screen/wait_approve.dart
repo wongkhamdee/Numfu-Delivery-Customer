@@ -86,6 +86,10 @@ class _AutoRefreshAndNavigatePageState
                       ? const SizedBox()
                       : Column(
                           children: [
+                            Image(
+                              image: AssetImage('img/delivery.gif'),
+                              width: 150,
+                            ),
                             ShowTitle(
                                 title: 'รอสักครู่',
                                 textStyle: MyCostant().h2Style()),
@@ -94,11 +98,11 @@ class _AutoRefreshAndNavigatePageState
                               style: MyCostant().h3d80Style(),
                             ),
                             SizedBox(height: 20),
-                            CircularProgressIndicator(
-                              strokeWidth: 5,
-                              valueColor: AlwaysStoppedAnimation<Color>(
-                                  MyCostant.primary),
-                            ),
+                            // CircularProgressIndicator(
+                            //   strokeWidth: 5,
+                            //   valueColor: AlwaysStoppedAnimation<Color>(
+                            //       MyCostant.primary),
+                            // ),
 
                             // Text(
                             //     'Auto refresh count: $count'), // แสดงตัวเลขนับถอยหลัง

@@ -59,12 +59,14 @@ dependencies:
   location: ^4.4.0
   flutter_svg: ^1.1.0
   animated_text_kit: ^4.2.2
+  flutter_launcher_icons: ^0.13.1
 flutter_icons:
   android: true
   image_path: "img/logo.png"
   adaptive_icon_background: "#FF8126" 
   adaptive_icon_foreground: "img/1024.png"
-
+  flutter_cache_manager: ^3.0.0
+  cached_network_image: ^3.0.0
 
 dev_dependencies:
   flutter_test:
